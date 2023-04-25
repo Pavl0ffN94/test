@@ -9,8 +9,19 @@
   </head>
   <body>
     <nav class="nav">
-      <div class="nav-icon">
-        <img src="./img/menu-icon.png" alt="" />
+      <div class="wrapper">
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+      <div class="nav-menu">
+        <ul class="nav-menu__list">
+          <li>Menu 1</li>
+          <li>Menu 2</li>
+          <li>Menu 3</li>
+          <li>Menu 4</li>
+          <p>8 800 000 00</p>
+        </ul>
       </div>
     </nav>
 
@@ -28,16 +39,20 @@
               est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat
             </p>
           </div>
-          <button href="./page2.html" class="main-btn">GO</button>
+          <a type="btn" href="./page2.html" class="main-btn">GO</a>
         </div>
 
         <div class="main-conten_right">
           <div class="right-speed">
-            <img src="./img/speed(1).png" alt="" />
+            <span class="speed__arow lvl-3"></span>
+            <img class="none" src="./img/lvl-1.png" alt="lvl-1" />
+            <img class="none" src="./img/lvl-2.png" alt="lvl-2" />
+            <img class="lvl-active" src="./img/lvl-3.png" alt="lvl-3" />
+
             <div class="right-lvl">
-              <button class="lvl-btn">level 1</button>
-              <button class="lvl-btn">level 2</button>
-              <button class="lvl-btn">level 3</button>
+              <button class="lvl-btn btn1">level 1</button>
+              <button class="lvl-btn btn2">level 2</button>
+              <button class="lvl-btn btn3">level 3</button>
             </div>
           </div>
         </div>
@@ -47,5 +62,7 @@
     <footer class="footer">
       <div class="container"></div>
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>

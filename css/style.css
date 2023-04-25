@@ -1,5 +1,9 @@
 @import 'reset.css';
 
+/* * {
+  border: 1px solid red;
+} */
+
 /* Generals*/
 html,
 body {
@@ -15,27 +19,88 @@ body {
 
 /*Nav*/
 .nav {
-  display: flex;
   background-image: url('./../img/Vector-nav.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
-
-  min-height: 220px;
+  min-height: 300px;
 }
 
-.nav-icon {
+.nav-menu {
+  position: fixed;
+
+  top: 0;
+  left: -100%;
+  width: 30%;
+  height: 100vh;
+  background-color: #090909;
+  color: #fff;
+  z-index: 5;
+  transition: 0.5s all ease;
+}
+.nav-menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.nav-menu__active {
+  left: 0;
+  top: 0;
+}
+
+/* Nav-burger*/
+.wrapper {
+  margin-top: 50px;
+  margin-left: 50px;
+  position: relative;
   width: 33px;
   height: 22px;
-  display: flex;
-  margin: 50px 25px;
+  cursor: pointer;
+  z-index: 6;
+  transition: 2s all;
+}
+
+.burger span,
+.burger span::after,
+.burger span::before {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.burger span::after {
+  content: ' ';
+  transform: translateY(8px);
+}
+
+.burger span::before {
+  content: ' ';
+  transform: translateY(-8px);
+}
+
+/* Activation span*/
+.burger__active span::after {
+  transform: rotate(-90deg);
+}
+.burger__active span::before {
+  display: none;
+}
+.burger__active span {
+  transform: rotate(45deg);
 }
 
 /*Main*/
 
 .main-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -70,28 +135,81 @@ body {
 }
 
 .main-btn {
+  display: flex;
   width: 300px;
   height: 60px;
 
   color: #fff;
   font-size: 20px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 
   background: linear-gradient(93.71deg, #7a0bc0 13.27%, #fa58b6 101.64%);
   border-radius: 30px;
 }
 
+.main-btn:active {
+  position: relative;
+  top: 2px;
+}
+
 /*Main Right*/
+.main-conten_right {
+  display: flex;
+}
 
 .right-speed {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .right-speed img {
   height: 371px;
   width: 371px;
 }
+
+/* Speedometer */
+.speed__arow {
+  width: 5px;
+  height: 95px;
+  border-radius: 5px;
+  background-color: #fff;
+  transform: 1s all;
+}
+.lvl-1 {
+  position: absolute;
+  left: 227px;
+  top: 157px;
+  transform: rotate(115deg);
+}
+
+.lvl-2 {
+  position: absolute;
+  left: 152px;
+  top: 162px;
+  transform: rotate(237deg);
+}
+.lvl-3 {
+  position: absolute;
+  left: 175px;
+  top: 121px;
+  transform: rotate(354deg);
+}
+
+.speed__lvl-3 img {
+  width: 400px;
+}
+
+.none {
+  display: none;
+}
+
+.lvl-active {
+  display: block;
+}
+
+/* Lvl's btn */
 
 .right-lvl {
   display: flex;
@@ -100,6 +218,7 @@ body {
 }
 
 .lvl-btn {
+  text-align: center;
   width: 136px;
   height: 38px;
   font-size: 18px;
@@ -107,6 +226,16 @@ body {
   border: 1px solid #ffffff;
   border-radius: 20px;
   color: #fff;
+}
+
+.lvl-btn:hover {
+  background-color: #7a0bc0;
+  box-shadow: -3px 22px 15px 9px rgba(2, 2, 2, 0.2);
+}
+
+.lvl-btn:active {
+  position: relative;
+  top: 2px;
 }
 
 /*Footer*/
