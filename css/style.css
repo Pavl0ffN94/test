@@ -1,8 +1,8 @@
 @import 'reset.css';
 
-/* * {
+* {
   border: 1px solid red;
-} */
+}
 
 /* Generals*/
 html,
@@ -156,12 +156,18 @@ body {
 /*Main Right*/
 .main-conten_right {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .right-speed {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
+
+  width: 565px;
+  height: 371px;
 }
 
 .right-speed img {
@@ -170,43 +176,39 @@ body {
 }
 
 /* Speedometer */
-.speed__arow {
-  width: 5px;
-  height: 95px;
-  border-radius: 5px;
-  background-color: #fff;
-  transform: 1s all;
+.speed-conntent {
+  position: relative;
 }
+
+.speedometer {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.8s all;
+
+  background-image: url('./../img/backdrop.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
 .lvl-1 {
-  position: absolute;
-  left: 227px;
-  top: 157px;
   transform: rotate(115deg);
 }
 
 .lvl-2 {
-  position: absolute;
-  left: 152px;
-  top: 162px;
   transform: rotate(237deg);
 }
 .lvl-3 {
-  position: absolute;
-  left: 175px;
-  top: 121px;
   transform: rotate(354deg);
 }
 
-.speed__lvl-3 img {
-  width: 400px;
+.lvl-img {
+  transition: 1s all;
 }
 
-.none {
-  display: none;
-}
-
-.lvl-active {
-  display: block;
+.lvl-img img {
+  color: black;
 }
 
 /* Lvl's btn */

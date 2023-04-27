@@ -10,20 +10,51 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 //Speedometer
-window.addEventListener('DOMContentLoaded', () => {
-  const arrow = document.querySelector('.speed__arow ');
-  const button1 = document.querySelector('.btn1');
-  const button2 = document.querySelector('button2');
-  const button3 = document.querySelector('button3');
-  const image = document.querySelector('image');
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
 
-  button1.addEventListener('click', () => {});
-  /* 
-  button2.addEventListener('click', function () {
-    image.src = 'image2.jpg';
-  });
+const imgSpeed = document.querySelector('svg');
+imgSpeed.style.fill = 'red';
 
-  button3.addEventListener('click', function () {
-    image.src = 'image3.jpg';
-  }); */
+btn1.addEventListener('click', () => {
+  console.log('btn1');
+  imgSpeed.style.fill = 'red';
+  console.dir(imgSpeed);
 });
+
+function animateFill(color) {
+  const circle = document.getElementById('circle');
+  const currentFill = circle.getAttribute('fill');
+  let fillPercentage = 0;
+  let targetFill = '';
+
+  switch (color) {
+    case 'lvl1':
+      fillPercentage = 33;
+      targetFill = '#7A0BC0';
+      break;
+    case 'lvl2':
+      fillPercentage = 66;
+      targetFill = '#0B8AC0';
+      break;
+    case 'lvl3':
+      fillPercentage = 99;
+      targetFill = '#E105E5';
+      break;
+  }
+
+  if (currentFill === 'none') {
+    circle.setAttribute('fill', targetFill);
+  } else {
+    const currentPercentage = parseInt(currentFill);
+    const interval = setInterval(function () {
+      if (currentPercentage < fillPercentage) {
+        currentPercentage++;
+        circle.setAttribute('fill', `${targetFill} ${currentPercentage}%`);
+      } else {
+        clearInterval(interval);
+      }
+    }, 10);
+  }
+}
