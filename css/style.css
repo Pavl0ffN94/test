@@ -1,8 +1,8 @@
 @import 'reset.css';
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 /* Generals*/
 html,
@@ -12,9 +12,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-.container {
-  max-width: 1200px;
+.main {
+  position: relative;
 }
 
 /*Nav*/
@@ -35,7 +34,7 @@ body {
   height: 100vh;
   background-color: #090909;
   color: #fff;
-  z-index: 5;
+  z-index: 10;
   transition: 0.5s all ease;
 }
 .nav-menu__list {
@@ -62,7 +61,7 @@ body {
   width: 33px;
   height: 22px;
   cursor: pointer;
-  z-index: 6;
+  z-index: 11;
   transition: 2s all;
 }
 
@@ -94,47 +93,53 @@ body {
 }
 .burger__active span {
   transform: rotate(45deg);
+  z-index: 11;
 }
 
-/*Main*/
-
-.main-row {
+/*Main section1*/
+.section1 {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  z-index: 4;
+  gap: 30px;
 }
 
 /* Main Left*/
-.main-conten_left {
+.section1__content-left {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: flex-start;
-  padding: 0px;
-  gap: 50px;
+  gap: 30px;
+  row-gap: 30px;
 }
 
-.main-title {
+.title {
   color: #fff;
   font-size: 48px;
   font-weight: 400;
   line-height: 58px;
 }
 
-.main-text {
+.content-left__text {
   max-width: 570px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
 }
 
-.main p {
+.content-left__text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #fff;
 }
 
-.main-btn {
+.content-left__btn {
   display: flex;
   width: 300px;
   height: 60px;
@@ -148,13 +153,13 @@ body {
   border-radius: 30px;
 }
 
-.main-btn:active {
+.content-left__btn:active {
   position: relative;
   top: 2px;
 }
 
 /*Main Right*/
-.main-conten_right {
+.section1__content-right {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,55 +169,65 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-
-  width: 565px;
-  height: 371px;
-}
-
-.right-speed img {
-  height: 371px;
-  width: 371px;
+  transition: 0.5s all ease-in;
 }
 
 /* Speedometer */
-.speed-conntent {
+
+.speed-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  width: 370px;
+  height: 370px;
+
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-right: 50px;
+
+  transform-origin: center;
+  transform: rotate(-90deg);
+  stroke: #7a0bc0;
+}
+.progress-ring__circle {
+  transition: 0.5s all ease-in;
 }
 
-.speedometer {
+.speed-arrow {
+  position: absolute;
   display: flex;
   justify-content: center;
-  border-radius: 50%;
-  transition: 0.8s all;
 
-  background-image: url('./../img/backdrop.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
+  width: 100px;
+  height: 9px;
+  top: 184px;
+  left: 84px;
+  transition: 0.5s all ease-in;
+
+  border-radius: 13px;
+  transform-origin: 100% 50%;
 }
 
+/* Active lvl */
+
 .lvl-1 {
-  transform: rotate(115deg);
+  background-color: #7a0bc0;
+  transform: rotate(-62deg);
 }
 
 .lvl-2 {
-  transform: rotate(237deg);
+  background-color: #0b8ac0;
+  transform: rotate(57deg);
 }
+
 .lvl-3 {
-  transform: rotate(354deg);
-}
-
-.lvl-img {
-  transition: 1s all;
-}
-
-.lvl-img img {
-  color: black;
+  background-color: #fa58b6;
+  transform: rotate(176deg);
 }
 
 /* Lvl's btn */
-
 .right-lvl {
   display: flex;
   flex-direction: column;
@@ -238,6 +253,33 @@ body {
 .lvl-btn:active {
   position: relative;
   top: 2px;
+}
+
+/* Main section2 */
+.section2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 65%;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+.section_2-active {
+  transform: translateX(-100%);
+}
+.none {
+  display: none;
+}
+
+.section2__content {
+  display: flex;
+  flex-direction: row;
+}
+
+.section2-title {
 }
 
 /*Footer*/

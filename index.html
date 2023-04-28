@@ -26,63 +26,73 @@
     </nav>
 
     <main class="main">
-      <div class="main-row">
-        <div class="main-conten_left">
-          <h1 class="main-title">
+      <div class="section1">
+        <div class="section1__content-left">
+          <h1 class="title">
             Bibendum neque
             <br />
             egestas congue
           </h1>
-          <div class="main-text">
+          <div class="content-left__text">
             <p>
               lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus
               est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat
             </p>
           </div>
-          <a type="btn" href="./page2.html" class="main-btn">GO</a>
+          <a type="btn" href="./page2.html" class="content-left__btn">GO</a>
         </div>
 
-        <div class="main-conten_right">
+        <div class="section1__content-right">
           <div class="right-speed">
-            <div class="speedometer">
-              <svg
-                class="circle"
-                width="371"
-                height="371"
-                viewbox="0 0 384 384"
-                fill=""
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M347.47 176.054C350.424 205.628 344.903 235.432 331.551 261.985L303.565 247.912C314.247 226.67 318.664 202.827 316.3 179.168L347.47 176.054Z" />
-                <path
-                  d="M301.071 79.5884C322.331 100.357 337.243 126.747 344.064 155.674L313.576 162.864C308.119 139.722 296.189 118.611 279.182 101.995L301.071 79.5884Z" />
-                <path
-                  d="M203.403 35.4437C233.04 37.6792 261.429 48.301 285.254 66.0687L266.528 91.1795C247.468 76.9654 224.757 68.4679 201.047 66.6795L203.403 35.4437Z" />
-                <path
-                  d="M100.422 64.2923C124.584 46.9859 153.172 36.9116 182.846 35.2461L184.601 66.5214C160.862 67.8538 137.992 75.9132 118.662 89.7584L100.422 64.2923Z" />
-                <path
-                  d="M39.9134 152.7C47.2995 123.911 62.7242 97.8187 84.3861 77.4693L105.833 100.3C88.5039 116.579 76.1641 137.454 70.2553 160.485L39.9134 152.7Z" />
-                <path
-                  d="M50.4328 259.417C37.568 232.625 32.5921 202.725 36.0861 173.21L67.1934 176.893C64.3982 200.504 68.3789 224.424 78.6707 245.858L50.4328 259.417Z" />
-                <path
-                  d="M127.028 334.305C99.9526 322.047 76.9236 302.339 60.6308 277.482L86.8292 260.31C99.8634 280.196 118.287 295.962 139.947 305.769L127.028 334.305Z" />
-                <path
-                  d="M233.886 342.436C205.267 350.455 174.958 350.167 146.497 341.604L155.522 311.608C178.291 318.458 202.538 318.689 225.433 312.273L233.886 342.436Z" />
-                <path
-                  d="M320.981 279.925C304.224 304.472 280.83 323.744 253.529 335.492L241.147 306.718C262.988 297.32 281.704 281.902 295.109 262.264L320.981 279.925Z" />
+            <div class="speed-circle">
+              <div class="speed-arrow lvl-1"></div>
+              <svg class="circle" width="370" height="370">
+                <circle
+                  class="progress-ring__circle"
+                  stroke=" "
+                  fill="transparent"
+                  stroke-width="20"
+                  cx="185"
+                  cy="185"
+                  r="145" />
               </svg>
             </div>
 
             <div class="right-lvl">
-              <button onclick="animateFill('#7A0BC0')" id="btn1" class="lvl-btn">
-                level 1
-              </button>
-              <button onclick="animateFill('#0B8AC0')" id="btn2" class="lvl-btn">
-                level 2
-              </button>
-              <button onclick="animateFill('#E105E5')" id="btn3" class="lvl-btn">
-                level 3
-              </button>
+              <button id="btn1" class="lvl-btn">level 1</button>
+              <button id="btn2" class="lvl-btn">level 2</button>
+              <button id="btn3" class="lvl-btn">level 3</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section2 none">
+        <div class="section2__content">
+          <div class="section2_left">
+            <h1 class="title">PageMaker including versions of Lorem Ipsum</h1>
+            <div class="section2-text">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and scrambled it to
+                make a type specimen book. It has survived not only five centuries, but
+                also the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of Letraset
+                sheets containing
+              </p>
+            </div>
+            <a type="btn" href="./index.html" class="main-btn">BACK</a>
+          </div>
+
+          <div class="section2__content-right">
+            <div class="right-speed">
+              <img src="./img/speed(1).png" alt="" />
+              <div class="right-lvl">
+                <button class="lvl-btn">level 1</button>
+                <button class="lvl-btn">level 2</button>
+                <button class="lvl-btn">level 3</button>
+              </div>
             </div>
           </div>
         </div>
