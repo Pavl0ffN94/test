@@ -1,8 +1,8 @@
 @import 'reset.css';
-/* 
+
 * {
   border: 1px solid red;
-} */
+}
 
 /* Generals*/
 html,
@@ -12,8 +12,18 @@ body {
   display: flex;
   flex-direction: column;
 }
-.main {
+
+.container {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  min-height: 600px;
+  margin: 0 auto;
+  transition: 0.8 all ease-in;
+
+  overflow: hidden;
 }
 
 /*Nav*/
@@ -100,11 +110,12 @@ body {
 .section1 {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   position: relative;
-  z-index: 4;
   gap: 30px;
+  transition: 0.8 all ease-in;
+  transform: translateX(-10px);
 }
 
 /* Main Left*/
@@ -114,8 +125,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  gap: 30px;
   row-gap: 30px;
+  margin-left: 10px;
 }
 
 .title {
@@ -125,21 +136,21 @@ body {
   line-height: 58px;
 }
 
-.content-left__text {
+.text {
   max-width: 570px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
 }
 
-.content-left__text p {
+.text p {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 25px;
   color: #fff;
 }
 
-.content-left__btn {
+.btn {
   display: flex;
   width: 300px;
   height: 60px;
@@ -148,12 +159,16 @@ body {
   font-size: 20px;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
 
-  background: linear-gradient(93.71deg, #7a0bc0 13.27%, #fa58b6 101.64%);
   border-radius: 30px;
 }
 
-.content-left__btn:active {
+.btn:hover {
+  background: linear-gradient(93.71deg, #7a0bc0 13.27%, #fa58b6 101.64%);
+}
+
+.btn:active {
   position: relative;
   top: 2px;
 }
@@ -185,7 +200,7 @@ body {
 
   border: 5px solid white;
   border-radius: 50%;
-  margin-right: 50px;
+  margin-right: 15px;
 
   transform-origin: center;
   transform: rotate(-90deg);
@@ -262,24 +277,82 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   position: absolute;
-  top: 0;
-  left: 65%;
-  z-index: 1;
-  transition: transform 0.5s ease-in-out;
-}
-.section_2-active {
-  transform: translateX(-100%);
-}
-.none {
-  display: none;
+  z-index: -9;
+
+  gap: 30px;
+  transition: 0.8 all ease-in;
+  transform: translateX(120%);
 }
 
 .section2__content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  gap: 30px;
 }
 
-.section2-title {
+.show {
+  transform: translateX(0);
+  z-index: 9;
+}
+.nonision {
+  z-index: -5;
+}
+
+.section2__left {
+  display: flex;
+  flex-direction: column;
+
+  gap: 35px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.section2__right {
+  display: flex;
+  flex-direction: column;
+  column-gap: 35px;
+  gap: 35px;
+}
+
+.prize__container {
+  position: relative;
+  max-width: 550px;
+  overflow: hidden;
+}
+
+/* Prize */
+.prize {
+  display: flex;
+}
+
+.prize-img {
+  width: auto;
+
+  height: auto;
+  margin-right: 20px;
+}
+
+.right-btn {
+  cursor: pointer;
+}
+
+.left-btn {
+  cursor: pointer;
+}
+/* Slide btn */
+.prize__btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 65px;
+  position: absolute;
+  left: 10px;
+  bottom: 100px;
 }
 
 /*Footer*/
@@ -295,4 +368,51 @@ body {
   background-position: center center;
   box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25);
   min-height: 145px;
+}
+
+@media (max-width: 675px) {
+  .nav-menu {
+    width: 50%;
+  }
+  .container {
+    min-height: 130px;
+  }
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .section1__content-left {
+    row-gap: 15px;
+    align-items: center;
+  }
+  .title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+  .right-speed {
+    align-items: center;
+    flex-direction: column;
+  }
+  .speed-circle {
+    margin-right: 0;
+  }
+  .right-lvl {
+    gap: 35px;
+  }
+  .section2__left {
+    gap: 10px;
+    align-items: center;
+  }
+  .text p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .prize__btn {
+    left: 18px;
+    bottom: 35px;
+  }
 }

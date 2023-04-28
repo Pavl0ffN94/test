@@ -26,52 +26,57 @@
     </nav>
 
     <main class="main">
-      <div class="section1">
-        <div class="section1__content-left">
-          <h1 class="title">
-            Bibendum neque
-            <br />
-            egestas congue
-          </h1>
-          <div class="content-left__text">
-            <p>
-              lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus
-              est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat
-            </p>
+      <div class="container">
+        <div class="section1">
+          <div class="section1__content-left">
+            <h1 class="title">
+              Bibendum neque
+              <br />
+              egestas congue
+            </h1>
+            <div class="text">
+              <p>
+                lacus sed viverra tellus in hac habitasse platea dictumst vestibulum
+                rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt
+                lobortis feugiat
+              </p>
+            </div>
+            <button type="btn" id="btn-next" class="btn">GO</button>
           </div>
-          <a type="btn" href="./page2.html" class="content-left__btn">GO</a>
+
+          <div class="section1__content-right">
+            <div class="right-speed">
+              <div class="speed-circle">
+                <div class="speed-arrow lvl-1"></div>
+                <svg class="circle" width="370" height="370">
+                  <circle
+                    class="progress-ring__circle"
+                    stroke=" "
+                    fill="transparent"
+                    stroke-width="20"
+                    cx="185"
+                    cy="185"
+                    r="145" />
+                </svg>
+              </div>
+
+              <div class="right-lvl">
+                <button id="btn1" class="lvl-btn">level 1</button>
+                <button id="btn2" class="lvl-btn">level 2</button>
+                <button id="btn3" class="lvl-btn">level 3</button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="section1__content-right">
-          <div class="right-speed">
-            <div class="speed-circle">
-              <div class="speed-arrow lvl-1"></div>
-              <svg class="circle" width="370" height="370">
-                <circle
-                  class="progress-ring__circle"
-                  stroke=" "
-                  fill="transparent"
-                  stroke-width="20"
-                  cx="185"
-                  cy="185"
-                  r="145" />
-              </svg>
-            </div>
-
-            <div class="right-lvl">
-              <button id="btn1" class="lvl-btn">level 1</button>
-              <button id="btn2" class="lvl-btn">level 2</button>
-              <button id="btn3" class="lvl-btn">level 3</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 
-      <div class="section2 none">
-        <div class="section2__content">
-          <div class="section2_left">
-            <h1 class="title">PageMaker including versions of Lorem Ipsum</h1>
-            <div class="section2-text">
+        <div class="section2">
+          <div class="section2__left">
+            <h1 class="title">
+              PageMaker including
+              <br />
+              versions of Lorem Ipsum
+            </h1>
+            <div class="text">
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -82,21 +87,46 @@
                 sheets containing
               </p>
             </div>
-            <a type="btn" href="./index.html" class="main-btn">BACK</a>
+            <button type="btn" id="btn-prev" class="btn">BACK</button>
           </div>
 
-          <div class="section2__content-right">
-            <div class="right-speed">
-              <img src="./img/speed(1).png" alt="" />
-              <div class="right-lvl">
-                <button class="lvl-btn">level 1</button>
-                <button class="lvl-btn">level 2</button>
-                <button class="lvl-btn">level 3</button>
+          <div class="section2__right">
+            <div class="prize__container">
+              <div class="prize">
+                <img class="prize-1" src="./img/prize1.png" alt="" />
+                <img class="prize-2" src="./img/prize2.png" alt="" />
+                <img class="prize-3" src="./img/prize3.png" alt="" />
+              </div>
+              <div class="prize__btn">
+                <button class="right-btn">
+                  <svg
+                    width="30"
+                    height="48"
+                    viewBox="0 0 30 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M29.64 42.36L11.32 24L29.64 5.64L24 0L0 24L24 48L29.64 42.36Z"
+                      fill="#764BA2" />
+                  </svg>
+                </button>
+                <button class="left-btn">
+                  <svg
+                    width="30"
+                    height="48"
+                    viewBox="0 0 30 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.361328 42.36L18.6813 24L0.361328 5.64L6.00133 0L30.0013 24L6.00133 48L0.361328 42.36Z"
+                      fill="#764BA2" />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </main>
 
     <footer class="footer">

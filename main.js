@@ -26,7 +26,6 @@ const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 const btn3 = document.getElementById('btn3');
 const arrow = document.querySelector('.speed-arrow ');
-console.log(arrow);
 
 const color1 = '#7A0BC0';
 const color2 = '#0B8AC0';
@@ -53,3 +52,61 @@ btn3.addEventListener('click', () => {
   setProgress(98);
 });
 setProgress(33);
+
+/* Prize*/
+
+const prize = document.querySelector('.prize');
+const prizeImg = document.querySelectorAll('.prize img');
+const right = document.querySelector('.right-btn');
+const left = document.querySelector('.left-btn');
+
+let curentSlide = 0;
+
+let slideWidth = prizeImg[0].clientWidth;
+
+prize.style.transform = `translateX(${-slideWidth * curentSlide}px)`;
+
+function slide() {
+  if (curentSlide >= prizeImg.length - 1) {
+    curentSlide = 0;
+  } else {
+    curentSlide++;
+  }
+  prize.style.transition = 'transform 0.3s ease-in-out';
+  prize.style.transform = `translateX(${-slideWidth * curentSlide}px)`;
+}
+left.addEventListener('click', () => {
+  slide();
+});
+
+right.addEventListener('click', () => {
+  if (curentSlide <= 0) {
+    curentSlide = prizeImg.length - 1;
+  } else {
+    curentSlide--;
+  }
+  prize.style.transition = 'transform 0.3s ease-in-out';
+  prize.style.transform = `translateX(${-slideWidth * curentSlide}px)`;
+});
+
+/* horizontal change of blocks */
+
+const btnNext = document.getElementById('btn-next');
+const btnPrev = document.getElementById('btn-prev');
+const sec1 = document.querySelector('.section1');
+const sec2 = document.querySelector('.section2');
+
+btnNext.addEventListener('click', () => {
+  sec1.style.transition = '0.9s all  ease-in-out';
+  sec2.style.transition = ' 0.3s all  ease-in-out';
+  sec1.classList.add('nonision');
+  sec2.classList.add('show');
+});
+
+btnPrev.addEventListener('click', () => {
+  sec1.style.transition = '0.9s all  ease-in-out';
+  sec2.style.transition = ' 0.3s all ease-in-out';
+
+  sec1.classList.remove('nonision');
+  sec2.classList.remove('show');
+});
