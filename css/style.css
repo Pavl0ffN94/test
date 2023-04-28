@@ -362,6 +362,19 @@ body {
 
 /* Media */
 @media (max-width: 864px) {
+  .section1__content-left {
+    row-gap: 30px;
+    margin-left: 30px;
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 20px;
+  }
+  .btn {
+    width: 220px;
+    height: 40px;
+  }
   .prize__container {
     max-width: 350px;
   }
@@ -400,6 +413,7 @@ body {
   .right-speed {
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   .speed-circle {
     margin-right: 0;
@@ -412,9 +426,9 @@ body {
     align-items: center;
   }
   .text p {
-    font-weight: 300;
+    font-weight: 200;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 13px;
   }
   .prize__btn {
     left: 39px;
