@@ -89,6 +89,17 @@ right.addEventListener('click', () => {
   prize.style.transform = `translateX(${-slideWidth * curentSlide}px)`;
 });
 
+function handleResize() {
+  slideWidth = prize.offsetWidth;
+  curentSlide = 0;
+  prize.style.transition = 'none';
+  prize.style.transform = `translateX(0)`;
+}
+
+window.addEventListener('resize', handleResize);
+
+handleResize();
+
 /* horizontal change of blocks */
 
 const btnNext = document.getElementById('btn-next');
@@ -97,14 +108,14 @@ const sec1 = document.querySelector('.section1');
 const sec2 = document.querySelector('.section2');
 
 btnNext.addEventListener('click', () => {
-  sec1.style.transition = '0.9s all  ease-in-out';
+  sec1.style.transition = '0.3s all  ease-in-out';
   sec2.style.transition = ' 0.3s all  ease-in-out';
   sec1.classList.add('nonision');
   sec2.classList.add('show');
 });
 
 btnPrev.addEventListener('click', () => {
-  sec1.style.transition = '0.9s all  ease-in-out';
+  sec1.style.transition = '0.3s all  ease-in-out';
   sec2.style.transition = ' 0.3s all ease-in-out';
 
   sec1.classList.remove('nonision');
