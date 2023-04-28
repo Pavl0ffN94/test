@@ -1,9 +1,5 @@
 @import 'reset.css';
 
-* {
-  border: 1px solid red;
-}
-
 /* Generals*/
 html,
 body {
